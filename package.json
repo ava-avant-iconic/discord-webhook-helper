@@ -1,34 +1,38 @@
 {
-  "name": "discord-webhook-helper",
+  "name": "@ava-avant-iconic/discord-webhook-helper",
   "version": "1.0.0",
-  "description": "Simple Node.js library for sending Discord webhook status messages with embeds",
+  "description": "TypeDiscord webhook helper library with embed builders, action rows, file uploads, retry logic, and rate limiting awareness",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "build": "tsc",
-    "test": "node test.js",
-    "prepublishOnly": "npm run build"
+    "test": "npm run build && node --test dist/*.test.js",
+    "prepublishOnly": "npm run build && npm test"
   },
   "keywords": [
     "discord",
     "webhook",
     "embed",
-    "status",
-    "notification"
+    "bot",
+    "automation"
   ],
   "author": "AVA <ava@avant-iconic.com>",
   "license": "MIT",
-  "devDependencies": {
-    "@types/node": "^20.0.0",
-    "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "node-fetch": "^3.3.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ava-avant-iconic/discord-webhook-helper.git"
   },
   "files": [
     "dist",
     "README.md",
     "LICENSE"
-  ]
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
 }
